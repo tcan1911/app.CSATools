@@ -67,22 +67,11 @@
         nav ul li a:hover {
             color: #38bdf8;
         }
-        .btn-download-nav {
-            background-color: #c94c4c;
-            padding: 8px 16px;
-            border-radius: 4px;
-            font-weight: 600;
-            transition: background-color 0.3s;
-        }
-        .btn-download-nav:hover {
-            background-color: #b33939;
-            color: #ffffff;
-        }
 
-        /* Hero Section with Custom Background image hook */
+        /* Hero Section */
         .hero {
             background-color: #0d2c54;
-            background-image: 
+            background-image:
                 linear-gradient(rgba(13, 44, 84, 0.8), rgba(13, 44, 84, 0.85)),
                 url('background_hero.png'),
                 radial-gradient(at 50% 50%, rgba(56, 189, 248, 0.25) 0px, transparent 50%),
@@ -125,6 +114,7 @@
             text-decoration: none;
             border-radius: 5px;
             transition: all 0.3s;
+            cursor: pointer;
         }
         .btn-primary {
             background-color: #ffffff;
@@ -144,165 +134,19 @@
             transform: translateY(-2px);
         }
 
-        /* Pricing Section Components */
-        .pricing-section {
-            background-color: #ffffff;
-            padding: 60px 0;
-        }
-        .pricing-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        .pricing-header .logo-box {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            font-size: 24px;
-            font-weight: 700;
-            color: #0d2c54;
-            margin-bottom: 15px;
-        }
-        .pricing-header .logo-box svg {
-            width: 28px;
-            height: 28px;
-            fill: #0d2c54;
-        }
-        .pricing-header h2 {
-            font-size: 32px;
-            font-weight: 700;
-            color: #0d2c54;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
-        .pricing-header p {
-            font-size: 15px;
-            color: #666666;
-        }
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            align-items: stretch;
-            max-width: 1250px;
-            margin: 0 auto;
-        }
-        .price-card {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 16px;
-            padding: 35px 20px;
-            text-align: center;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
-            transition: all 0.3s ease;
-        }
-        .price-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 25px rgba(13, 44, 84, 0.08);
-        }
-        .price-card.featured {
-            border: 2px solid #0d2c54;
-        }
-        .pop-badge {
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #0d2c54;
-            color: #ffffff;
-            padding: 4px 14px;
-            font-size: 11px;
-            font-weight: 700;
-            border-radius: 20px;
-            text-transform: uppercase;
-            width: max-content;
-        }
-        .card-plan-title {
-            font-size: 13px;
-            font-weight: 700;
-            color: #64748b;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 20px;
-        }
-        .price-card.featured .card-plan-title {
-            color: #0d2c54;
-        }
-        .price-amount {
-            font-size: 34px;
-            font-weight: 800;
-            color: #0d2c54;
-            line-height: 1.2;
-        }
-        .price-amount span {
-            font-size: 18px;
-            font-weight: 600;
-            vertical-align: super;
-        }
-        .card-period {
-            font-size: 12px;
-            color: #94a3b8;
-            margin: 8px 0 25px 0;
-            font-weight: 500;
-        }
-        .card-features-list {
-            list-style: none;
-            text-align: left;
-            margin-bottom: 30px;
-            flex-grow: 1;
-        }
-        .card-features-list li {
-            font-size: 13px;
-            color: #475569;
-            padding: 8px 0;
-            display: flex;
-            align-items: flex-start;
-            gap: 8px;
-        }
-        .card-features-list li::before {
-            content: "✓";
-            color: #2ecc71;
-            font-weight: bold;
-        }
-        .card-features-list li.highlight-green {
-            color: #2ecc71;
-            font-weight: 600;
-        }
-        .btn-card {
-            display: block;
-            background-color: #ffffff;
-            color: #0d2c54;
-            border: 1.5px solid #0d2c54;
-            padding: 12px;
-            font-size: 14px;
-            font-weight: 700;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            cursor: pointer;
-        }
-        .btn-card:hover {
-            background-color: #0d2c54;
-            color: #ffffff;
-        }
-        .price-card.featured .btn-card {
-            background-color: #0d2c54;
-            color: #ffffff;
-        }
-        .price-card.featured .btn-card:hover {
-            background-color: #1b4965;
-            border-color: #1b4965;
-        }
-
-        /* Main Content Container */
+        /* Container Settings */
         .container {
             max-width: 1300px;
             margin: 0 auto;
             padding: 60px 20px;
+        }
+
+        /* Page View Switching System (SPA) */
+        .page-view {
+            display: none;
+        }
+        .page-view.active {
+            display: block;
         }
 
         /* Section Header */
@@ -444,22 +288,177 @@
             color: #333;
         }
 
-        /* REGISTER FORM STYLING */
-        .register-section {
-            background-color: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
-            padding: 40px 20px;
-            margin-bottom: 60px;
+        /* Pricing Section Components */
+        .pricing-section {
+            background-color: #ffffff;
+            padding: 30px 0 60px 0;
         }
-        .register-container {
-            max-width: 500px;
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .pricing-header .logo-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            font-size: 24px;
+            font-weight: 700;
+            color: #0d2c54;
+            margin-bottom: 15px;
+        }
+        .pricing-header .logo-box svg {
+            width: 28px;
+            height: 28px;
+            fill: #0d2c54;
+        }
+        .pricing-header h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #0d2c54;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        .pricing-header p {
+            font-size: 15px;
+            color: #666666;
+        }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            align-items: stretch;
+            max-width: 1250px;
             margin: 0 auto;
+        }
+        .price-card {
             background: #ffffff;
             border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 35px 20px;
+            text-align: center;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            transition: all 0.3s ease;
+        }
+        .price-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(13, 44, 84, 0.08);
+        }
+        .price-card.featured {
+            border: 2px solid #0d2c54;
+        }
+        .pop-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #0d2c54;
+            color: #ffffff;
+            padding: 4px 14px;
+            font-size: 11px;
+            font-weight: 700;
+            border-radius: 20px;
+            text-transform: uppercase;
+            width: max-content;
+        }
+        .card-plan-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+        }
+        .price-card.featured .card-plan-title {
+            color: #0d2c54;
+        }
+        .price-amount {
+            font-size: 34px;
+            font-weight: 800;
+            color: #0d2c54;
+            line-height: 1.2;
+        }
+        .price-amount span {
+            font-size: 18px;
+            font-weight: 600;
+            vertical-align: super;
+        }
+        .card-period {
+            font-size: 12px;
+            color: #94a3b8;
+            margin: 8px 0 25px 0;
+            font-weight: 500;
+        }
+        .card-features-list {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 30px;
+            flex-grow: 1;
+        }
+        .card-features-list li {
+            font-size: 13px;
+            color: #475569;
+            padding: 8px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+        .card-features-list li::before {
+            content: "✓";
+            color: #2ecc71;
+            font-weight: bold;
+        }
+        .card-features-list li.highlight-green {
+            color: #2ecc71;
+            font-weight: 600;
+        }
+        .btn-card {
+            display: block;
+            background-color: #ffffff;
+            color: #0d2c54;
+            border: 1.5px solid #0d2c54;
+            padding: 12px;
+            font-size: 14px;
+            font-weight: 700;
             border-radius: 8px;
-            padding: 30px;
-            box-shadow: 0 4px 12px rgba(13, 44, 84, 0.04);
+            text-decoration: none;
+            transition: all 0.2s ease;
+            text-align: center;
+            cursor: pointer;
+        }
+        .btn-card:hover {
+            background-color: #0d2c54;
+            color: #ffffff;
+        }
+        .price-card.featured .btn-card {
+            background-color: #0d2c54;
+            color: #ffffff;
+        }
+
+        /* REGISTER & PAYMENT SUBPAGES STYLE */
+        .subpage-container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 35px;
+            box-shadow: 0 10px 25px rgba(13, 44, 84, 0.05);
+            text-align: center;
+        }
+        .subpage-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #0d2c54;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
         }
         .form-group {
             text-align: left;
@@ -472,7 +471,7 @@
             color: #0d2c54;
             margin-bottom: 8px;
         }
-        .form-group input {
+        .form-group input, .form-group select {
             width: 100%;
             padding: 12px 14px;
             background-color: #ffffff;
@@ -483,7 +482,7 @@
             outline: none;
             transition: all 0.3s;
         }
-        .form-group input:focus {
+        .form-group input:focus, .form-group select:focus {
             border-color: #4b86b4;
             box-shadow: 0 0 0 3px rgba(75, 134, 180, 0.15);
         }
@@ -497,21 +496,55 @@
             font-weight: 600;
             border-radius: 6px;
             cursor: pointer;
-            margin-top: 5px;
+            margin-top: 10px;
             transition: background-color 0.3s;
         }
         .btn-submit:hover {
             background-color: #1b4965;
         }
-        #form-message {
-            margin-top: 15px;
-            font-size: 14px;
-            font-weight: 600;
-            text-align: center;
+        .admin-note-box {
+            background-color: #fdfaf2;
+            border-left: 4px solid #f39c12;
+            padding: 15px;
+            margin-top: 25px;
+            border-radius: 4px;
+            text-align: left;
+            font-size: 13.5px;
+            color: #555;
             line-height: 1.5;
         }
+        .admin-note-box strong { color: #d35400; }
 
-        /* Contact Block */
+        /* QR Details Card style */
+        .qr-wrapper {
+            margin: 20px auto;
+            max-width: 250px;
+            border: 1px solid #e2e8f0;
+            padding: 10px;
+            border-radius: 8px;
+            background: #fff;
+        }
+        .qr-img { width: 100%; height: auto; display: block; }
+        .bank-details-card {
+            background-color: #f8fafc;
+            border: 1px dashed #4b86b4;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: left;
+            margin-bottom: 25px;
+        }
+        .bank-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0;
+            border-bottom: 1px solid #f1f5f9;
+            font-size: 14.5px;
+        }
+        .bank-row:last-child { border-bottom: none; }
+        .bank-row span:first-child { font-weight: 600; color: #64748b; }
+        .bank-row span:last-child { font-weight: 700; color: #0d2c54; }
+
+        /* Contact Block / Footer */
         .footer-info {
             background-color: #0d2c54;
             color: #ffffff;
@@ -614,9 +647,7 @@
             cursor: pointer;
             transition: color 0.2s;
         }
-        .modal-close:hover {
-            color: #38bdf8;
-        }
+        .modal-close:hover { color: #38bdf8; }
         
         @media (max-width: 768px) {
             .nav-container { flex-direction: column; gap: 15px; }
@@ -627,7 +658,6 @@
 </head>
 <body>
 
-    <!-- Header / Navigation Bar -->
     <header>
         <div class="nav-container">
             <div class="logo-area">
@@ -636,352 +666,373 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#tinh-toan">Phần mềm Thiết Kế</a></li>
-                    <li><a href="#trien-khai">Phần mềm triển khai</a></li>
-                    <li><a href="#tien-ich">Tools Tiện Ích</a></li>
-                    <li><a href="#bang-gia-pro">Bảng Giá</a></li>
-                    <li><a href="#dang-ky">Đăng Ký</a></li>
-                    <li><a href="#lien-he">Liên Hệ</a></li>
+                    <li><a href="javascript:void(0)" onclick="navigateToView('homepage-view')">Trang Chủ</a></li>
+                    <li><a href="javascript:void(0)" onclick="switchPage('homepage-view', 'tinh-toan')">Phần mềm Thiết Kế</a></li>
+                    <li><a href="javascript:void(0)" onclick="switchPage('homepage-view', 'trien-khai')">Phần mềm triển khai</a></li>
+                    <li><a href="javascript:void(0)" onclick="switchPage('homepage-view', 'tien-ich')">Tools Tiện Ích</a></li>
+                    <li><a href="javascript:void(0)" onclick="switchPage('homepage-view', 'bang-gia-pro')">Bảng Giá</a></li>
+                    <li><a href="javascript:void(0)" onclick="openRegisterPage('Trial License', 'FREE')">Đăng Ký</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-container">
-            <h1>PHẦN MỀM TÍNH TOÁN VÀ TRIỂN KHAI KẾT CẤU CSA TOOLS</h1>
-            <p>Bộ công cụ tối ưu hóa toàn diện quy trình tính toán nội lực, thiết kế cấu kiện và tự động hóa triển khai bản vẽ kỹ thuật theo tiêu chuẩn thực tế dành cho Kỹ sư Xây dựng.</p>
-            <div class="hero-buttons">
-                <a href="https://drive.google.com/drive/folders/1VqY_xrHfkHBGZ3fY05nwL9-ZmkAHUsyj?usp=drive_link" class="btn btn-primary" target="_blank">Tải Bản Dùng Thử</a>
-                <a href="#dang-ky" class="btn btn-secondary">Đăng Ký Tài Khoản</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Zoom Modal -->
     <div id="imageZoomModal" class="modal">
         <span class="modal-close" onclick="closeZoomModal()">&times;</span>
         <img class="modal-content" id="zoomedImage">
         <div id="modalCaption" class="modal-caption"></div>
     </div>
 
-    <!-- Main Content Grid -->
-    <main class="container">
+    <div id="homepage-view" class="page-view active">
         
-        <!-- ================= SECTION 1: COMPUTE & DESIGN ================= -->
-        <h2 class="section-title" id="tinh-toan">Công Cụ Tính Toán & Thiết Kế Chính</h2>
-        <div class="module-grid">
+        <section class="hero">
+            <div class="hero-container">
+                <h1>PHẦN MỀM TÍNH TOÁN VÀ TRIỂN KHAI KẾT CẤU CSA TOOLS</h1>
+                <p>Bộ công cụ tối ưu hóa toàn diện quy trình tính toán nội lực, thiết kế cấu kiện và tự động hóa triển khai bản vẽ kỹ thuật theo tiêu chuẩn thực tế dành cho Kỹ sư Xây dựng.</p>
+                <div class="hero-buttons">
+                    <a href="https://drive.google.com/drive/folders/1VqY_xrHfkHBGZ3fY05nwL9-ZmkAHUsyj?usp=drive_link" class="btn btn-primary" target="_blank">Tải Bản Dùng Thử</a>
+                    <a href="javascript:void(0)" onclick="openRegisterPage('Trial License', 'FREE')" class="btn btn-secondary">Đăng Ký Tài Khoản</a>
+                </div>
+            </div>
+        </section>
+
+        <main class="container">
             
-            <!-- Module: Tải Trọng Gió & Động Đất -->
-            <div class="module-card">
-                <div class="module-card-title-container">
-                    <h3>Mô-đun Tính Toán Tải Trọng Gió & Động Đất</h3>
-                    <p>Hệ thống tính toán đầy đủ các thành phần tải trọng tác động lên công trình chuẩn xác theo tiêu chuẩn TCVN 2737 và quy chuẩn hiện hành.</p>
+            <h2 class="section-title" id="tinh-toan">Công Cụ Tính Toán & Thiết Kế Chính</h2>
+            <div class="module-grid">
+                
+                <div class="module-card">
+                    <div class="module-card-title-container">
+                        <h3>Module Tính Toán Tải Trọng Gió & Động Đất</h3>
+                        <p>Hệ thống tính toán đầy đủ các thành phần tải trọng tác động lên công trình chuẩn xác theo tiêu chuẩn TCVN 2737 và quy chuẩn hiện hành.</p>
+                    </div>
+                    <ul class="module-features">
+                        <li>Tính toán chi tiết thành phần gió tĩnh và gió động theo tiêu chuẩn TCVN 2737.</li>
+                        <li>Phân tích, xác định phổ phản ứng liên tục phục vụ tính toán tải trọng động đất.</li>
+                        <li>Tự động lập bảng và tạo tổ hợp tải trọng chuẩn hóa, kết xuất nhanh chóng sang file tính toán.</li>
+                    </ul>
+                    <div class="image-gallery">
+                        <div class="img-placeholder" onclick="openZoomModal(this, 'gio_1.png')"><img src="gio_1.png" onerror="this.style.display='none'"><div class="img-label">Tải Trọng Gió 1</div><div class="img-hint">gio_1.png</div></div>
+                        <div class="img-placeholder" onclick="openZoomModal(this, 'gio_2.png')"><img src="gio_2.png" onerror="this.style.display='none'"><div class="img-label">Tải Trọng Gió 2</div><div class="img-hint">gio_2.png</div></div>
+                        <div class="img-placeholder" onclick="openZoomModal(this, 'gio_3.png')"><img src="gio_3.png" onerror="this.style.display='none'"><div class="img-label">Tải Trọng Gió 3</div><div class="img-hint">gio_3.png</div></div>
+                        <div class="img-placeholder" onclick="openZoomModal(this, 'gio_4.png')"><img src="gio_4.png" onerror="this.style.display='none'"><div class="img-label">Động Đất 4</div><div class="img-hint">gio_4.png</div></div>
+                        <div class="img-placeholder" onclick="openZoomModal(this, 'gio_5.png')"><img src="gio_5.png" onerror="this.style.display='none'"><div class="img-label">Động Đất 5</div><div class="img-hint">gio_5.png</div></div>
+                    </div>
                 </div>
-                <ul class="module-features">
-                    <li>Tính toán chi tiết thành phần gió tĩnh và gió động theo tiêu chuẩn TCVN 2737.</li>
-                    <li>Phân tích, xác định phổ phản ứng liên tục phục vụ tính toán tải trọng động đất.</li>
-                    <li>Tự động lập bảng và tạo tổ hợp tải trọng chuẩn hóa, kết xuất nhanh chóng sang file tính toán.</li>
-                </ul>
-                <div class="image-gallery">
-                    <div class="img-placeholder" onclick="openZoomModal(this, 'gio_1.png')"><img src="gio_1.png" onerror="this.style.display='none'"><div class="img-label">Tải Trọng Gió 1</div><div class="img-hint">gio_1.png</div></div>
-                    <div class="img-placeholder" onclick="openZoomModal(this, 'gio_2.png')"><img src="gio_2.png" onerror="this.style.display='none'"><div class="img-label">Tải Trọng Gió 2</div><div class="img-hint">gio_2.png</div></div>
-                    <div class="img-placeholder" onclick="openZoomModal(this, 'gio_3.png')"><img src="gio_3.png" onerror="this.style.display='none'"><div class="img-label">Tải Trọng Gió 3</div><div class="img-hint">gio_3.png</div></div>
-                    <div class="img-placeholder" onclick="openZoomModal(this, 'gio_4.png')"><img src="gio_4.png" onerror="this.style.display='none'"><div class="img-label">Động Đất 4</div><div class="img-hint">gio_4.png</div></div>
-                    <div class="img-placeholder" onclick="openZoomModal(this, 'gio_5.png')"><img src="gio_5.png" onerror="this.style.display='none'"><div class="img-label">Động Đất 5</div><div class="img-hint">gio_5.png</div></div>
+
+                <div class="module-card">
+                    <div class="module-card-title-container">
+                        <h3>Module Kiểm Tra Ổn Định Tổng Thể</h3>
+                        <p>Bộ công cụ hỗ trợ kiểm tra các chỉ tiêu ổn định chuyển vị, lật, trượt và hiệu ứng bậc hai cho toàn bộ mô hình kết cấu công trình.</p>
+                    </div>
+                    <ul class="module-features">
+                        <li>Kiểm tra và đánh giá chi tiết chỉ số chuyển vị đỉnh, chuyển vị lệch tầng của công trình.</li>
+                        <li>Phân tích hệ số an toàn chống lật, chống trượt tổng thể dưới tác dụng của tải trọng ngang nguy hiểm.</li>
+                        <li>Tính toán kiểm tra hiệu ứng P-Delta (hiệu ứng bậc hai), tỷ số nén bảo đảm theo quy định TCVN 9386_2025.</li>
+                    </ul>
+                    <div class="image-gallery">
+                        <div class="img-placeholder" onclick="openZoomModal(this, 'on_dinh_1.png')"><img src="on_dinh_1.png" onerror="this.style.display='none'"><div class="img-label">Ổn Định Tổng Thể 1</div><div class="img-hint">on_dinh_1.png</div></div>
+                        <div class="img-placeholder" onclick="openZoomModal(this, 'on_dinh_2.png')"><img src="on_dinh_2.png" onerror="this.style.display='none'"><div class="img-label">Ổn Định Tổng Thể 2</div><div class="img-hint">on_dinh_2.png</div></div>
+                        <div class="img-placeholder" onclick="openZoomModal(this, 'on_dinh_3.png')"><img src="on_dinh_3.png" onerror="this.style.display='none'"><div class="img-label">Ổn Định Tổng Thể 3</div><div class="img-hint">on_dinh_3.png</div></div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-card-title-container">
+                        <h3>Module Tính Toán Thiết Kế Dầm</h3>
+                        <p>Tự động lấy nội lực và cập nhật từ Etabs, Safe; tính toán cốt thép dầm liên tục từ mô hình phân tích và xuất bản thuyết minh chi tiết.</p>
+                    </div>
+                    <ul class="module-features">
+                        <li>Hỗ trợ đầy đủ tiêu chuẩn hiện hành Việt Nam (TCVN) và Tiêu chuẩn Châu Âu (Eurocode).</li>
+                        <li>Tự động lấy nội lực nguy hiểm, đồng bộ dữ liệu mô hình trực tiếp không qua trung gian.</li>
+                        <li>Kiểm tra toàn diện các điều kiện uốn, cắt, nứt, xoắn của cấu kiện dầm BTCT liên tục.</li>
+                    </ul>
+                    <div class="image-gallery">
+                        <div class="img-placeholder" onclick="openZoomModal(this, 'dam_1.png')"><img src="dam_1.png" onerror="this.style.display='none'"><div class="img-label">Ảnh Mô-đun Dầm 1</div><div class="img-hint">dam_1.png</div></div>
+                        <div class="img-placeholder" onclick="openZoomModal(this, 'dam_2.png')"><img src="dam_2.png" onerror="this.style.display='none'"><div class="img-label">Ảnh Mô-đun Dầm 2</div><div class="img-hint">dam_2.png</div></div>
+                        <div class="img-placeholder" onclick="openZoomModal(this, 'dam_3.png')"><img src="dam_3.png" onerror="this.style.display='none'"><div class="img-label">Ảnh Mô-đun Dầm 3</div><div class="img-hint">dam_3.png</div></div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-card-title-container">
+                        <h3>Module Tính Toán Thiết Kế Cột Vách</h3>
+                        <p>Giải pháp tính toán hàng loạt cấu kiện cột tròn, cột chữ nhật và vách chữ nhật chịu nén lệch tâm xiên, hỗ trợ bố trí thép từ AutoCAD chuyên nghiệp.</p>
+                    </div>
+                    <ul class="module-features">
+                        <li>Tính toán theo phương pháp biểu đồ tương tác chuẩn xác và kiểm tra cắt theo TCVN và Eurocode.</li>
+                        <li>Hỗ trợ thiết kế phân tích tối ưu hàng loạt cho tiết diện cột tròn, cột chữ nhật, vách chữ nhật.</li>
+                        <li>Nhập và đồng bộ sơ đồ bố trí thép trực tiếp từ AutoCAD giúp quản lý hàm lượng thép bao hợp lý.</li>
+                    </ul>
+                    <div class="image-gallery">
+                        <div class="img-placeholder" onclick="openZoomModal(this, 'cot_1.png')"><img src="cot_1.png" onerror="this.style.display='none'"><div class="img-label">Ảnh Cột Vách 1</div><div class="img-hint">cot_1.png</div></div>
+                        <div class="img-placeholder" onclick="openZoomModal(this, 'cot_2.png')"><img src="cot_2.png" onerror="this.style.display='none'"><div class="img-label">Ảnh Cột Vách 2</div><div class="img-hint">cot_2.png</div></div>
+                        <div class="img-placeholder" onclick="openZoomModal(this, 'cot_3.png')"><img src="cot_3.png" onerror="this.style.display='none'"><div class="img-label">Ảnh Cột Vách 3</div><div class="img-hint">cot_3.png</div></div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-card-title-container">
+                        <h3>Module Tính Toán Thiết Kế Sàn</h3>
+                        <p>Phân tích hệ sàn bê tông cốt thép toàn khối, sàn phẳng bản nấm và hệ dầm sàn phức tạp.</p>
+                    </div>
+                    <ul class="module-features">
+                        <li>Tính toán diện tích cốt thép sàn theo các tổ hợp nội lực từ SAFE hoặc Etabs.</li>
+                        <li>Xuất dữ liệu thép phân bố trực quan giúp dễ dàng rải thép đều và thép tăng cường lực momen.</li>
+                        <li>Hỗ trợ trích xuất dữ liệu, kiểm tra ứng suất sàn nhanh chóng chuẩn quy trình thiết kế.</li>
+                    </ul>
+                    <div class="image-gallery">
+                        <div class="img-placeholder" onclick="openZoomModal(this, 'san_1.png')"><img src="san_1.png" onerror="this.style.display='none'"><div class="img-label">Ảnh Mô-đun Sàn 1</div><div class="img-hint">san_1.png</div></div>
+                        <div class="img-placeholder" onclick="openZoomModal(this, 'san_2.png')"><img src="san_2.png" onerror="this.style.display='none'"><div class="img-label">Ảnh Mô-đun Sàn 2</div><div class="img-hint">san_2.png</div></div>
+                        <div class="img-placeholder" onclick="openZoomModal(this, 'san_3.png')"><img src="san_3.png" onerror="this.style.display='none'"><div class="img-label">Ảnh Mô-đun Sàn 3</div><div class="img-hint">san_3.png</div></div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-card-title-container">
+                        <h3>Module Kiểm Tra Thiết Kế Cọc</h3>
+                        <p>Giải pháp tính toán sức chịu tải cấu kiện cọc ly tâm, cọc khoan nhồi, cọc vuông bê tông; kiểm tra nhanh sức chịu tải cọc và hỗ trợ bố trí cọc tự động trong AutoCAD.</p>
+                    </div>
+                    <ul class="module-features">
+                        <li>Tính toán chi tiết sức chịu tải của cọc ly tâm, cọc khoan nhồi, cọc vuông bê tông đúc sẵn.</li>
+                        <li>Tích hợp thuật toán kiểm tra nhanh sức chịu tải cọc theo chỉ tiêu cơ lý đất nền và vật liệu.</li>
+                        <li>Tự động hóa tính toán, rải rắp vị trí tim cọc thông minh đồng bộ trực tiếp vào không gian AutoCAD.</li>
+                    </ul>
+                    <div class="image-gallery">
+                        <div class="img-placeholder" onclick="openZoomModal(this, 'coc_1.png')"><img src="coc_1.png" onerror="this.style.display='none'"><div class="img-label">Thiết Kế Cọc 1</div><div class="img-hint">coc_1.png</div></div>
+                        <div class="img-placeholder" onclick="openZoomModal(this, 'coc_2.png')"><img src="coc_2.png" onerror="this.style.display='none'"><div class="img-label">Thiết Kế Cọc 2</div><div class="img-hint">coc_2.png</div></div>
+                        <div class="img-placeholder" onclick="openZoomModal(this, 'coc_3.png')"><img src="coc_3.png" onerror="this.style.display='none'"><div class="img-label">Bố Trí Cọc Auto 3</div><div class="img-hint">coc_3.png</div></div>
+                    </div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-card-title-container">
+                        <h3>Module Thiết Kế Móng</h3>
+                        <p>Giải pháp tối ưu hóa phân tích kiểm tra độc lập nền móng cho hệ móng đơn và móng băng.</p>
+                    </div>
+                    <ul class="module-features">
+                        <li>Xác định nhanh kích thước đáy đệm móng, kiểm tra áp lực nền móng chuẩn quy phạm.</li>
+                        <li>Tính toán diện tích cốt thép đài móng đơn, cốt thép móng băng theo tổ hợp lực momen.</li>
+                        <li>Báo cáo thuyết minh thông tin đồ họa rõ ràng phục vụ công tác hồ sơ bàn giao.</li>
+                    </ul>
+                    <div class="image-gallery">
+                        <div class="img-placeholder" onclick="openZoomModal(this, 'mong_1.png')"><img src="mong_1.png" onerror="this.style.display='none'"><div class="img-label">Ảnh Thiết Kế Móng 1</div><div class="img-hint">mong_1.png</div></div>
+                        <div class="img-placeholder" onclick="openZoomModal(this, 'mong_2.png')"><img src="mong_2.png" onerror="this.style.display='none'"><div class="img-label">Ảnh Thiết Kế Móng 2</div><div class="img-hint">mong_2.png</div></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <h2 class="section-title" id="trien-khai">Triển Khai Bản Vẽ Tự Động & Thống Kê</h2>
+            <div class="module-grid">
+                <div class="module-card">
+                    <div class="module-card-title-container">
+                        <h3>Hệ Thống Vẽ Tự Động Kết Cấu (Dầm, Sàn, Cột, Vách, Móng, Cầu Thang,...)</h3>
+                        <p>Liên kết trực tiếp dữ liệu từ các cấu kiện đã tính toán để tự động triển khai bản vẽ thiết kế, bản vẽ shopdrawing chi tiết sang AutoCAD kèm bảng thống kê cốt thép đầy đủ.</p>
+                    </div>
+                    <ul class="module-features">
+                        <li>Vẽ tự động mặt cắt, mặt đứng cấu kiện dầm, cột, vách chính xác theo đúng tỷ lệ bản vẽ cấu tạo.</li>
+                        <li>Tự động thống kê chi tiết từng thanh cốt thép, phân loại đường kính, hình dáng và xuất bảng thống kê trực tiếp trên bản vẽ.</li>
+                        <li>Rút ngắn đáng kể thời gian triển khai hồ sơ kỹ thuật, giảm thiểu tối đa các sai lệch hình học thủ công.</li>
+                    </ul>
+                    <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
+                        <div class="img-placeholder" onclick="openZoomModal(this, 'trien_khai_1.png')"><img src="trien_khai_1.png" onerror="this.style.display='none'"><div class="img-label">Bản Vẽ Triển Khai 1</div><div class="img-hint">trien_khai_1.png</div></div>
+                        <div class="img-placeholder" onclick="openZoomModal(this, 'trien_khai_2.png')"><img src="trien_khai_2.png" onerror="this.style.display='none'"><div class="img-label">Bản Vẽ Triển Khai 2</div><div class="img-hint">trien_khai_2.png</div></div>
+                        <div class="img-placeholder" onclick="openZoomModal(this, 'trien_khai_3.png')"><img src="trien_khai_3.png" onerror="this.style.display='none'"><div class="img-label">Bản Vẽ Triển Khai 3</div><div class="img-hint">trien_khai_3.png</div></div>
+                        <div class="img-placeholder" onclick="openZoomModal(this, 'trien_khai_4.png')"><img src="trien_khai_4.png" onerror="this.style.display='none'"><div class="img-label">Bản Vẽ Triển Khai 4</div><div class="img-hint">trien_khai_4.png</div></div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Module: Kiểm Tra Ổn Định Tổng Thể -->
-            <div class="module-card">
-                <div class="module-card-title-container">
-                    <h3>Mô-đun Kiểm Tra Ổn Định Tổng Thể</h3>
-                    <p>Bộ công cụ hỗ trợ kiểm tra các chỉ tiêu ổn định chuyển vị, lật, trượt và hiệu ứng bậc hai cho toàn bộ mô hình kết cấu công trình.</p>
-                </div>
-                <ul class="module-features">
-                    <li>Kiểm tra và đánh giá chi tiết chỉ số chuyển vị đỉnh, chuyển vị lệch tầng của công trình.</li>
-                    <li>Phân tích hệ số an toàn chống lật, chống trượt tổng thể dưới tác dụng của tải trọng ngang nguy hiểm.</li>
-                    <li>Tính toán kiểm tra hiệu ứng P-Delta (hiệu ứng bậc hai), tỷ số nén bảo đảm theo quy định TCVN 9386_2025.</li>
-                </ul>
-                <div class="image-gallery">
-                    <div class="img-placeholder" onclick="openZoomModal(this, 'on_dinh_1.png')"><img src="on_dinh_1.png" onerror="this.style.display='none'"><div class="img-label">Ổn Định Tổng Thể 1</div><div class="img-hint">on_dinh_1.png</div></div>
-                    <div class="img-placeholder" onclick="openZoomModal(this, 'on_dinh_2.png')"><img src="on_dinh_2.png" onerror="this.style.display='none'"><div class="img-label">Ổn Định Tổng Thể 2</div><div class="img-hint">on_dinh_2.png</div></div>
-                    <div class="img-placeholder" onclick="openZoomModal(this, 'on_dinh_3.png')"><img src="on_dinh_3.png" onerror="this.style.display='none'"><div class="img-label">Ổn Định Tổng Thể 3</div><div class="img-hint">on_dinh_3.png</div></div>
-                </div>
-            </div>
-
-            <!-- Module: Dầm -->
-            <div class="module-card">
-                <div class="module-card-title-container">
-                    <h3>Mô-đun Tính Toán Thiết Kế Dầm</h3>
-                    <p>Tự động lấy nội lực và cập nhật từ Etabs, Safe; tính toán cốt thép dầm liên tục từ mô hình phân tích và xuất bản thuyết minh chi tiết.</p>
-                </div>
-                <ul class="module-features">
-                    <li>Hỗ trợ đầy đủ tiêu chuẩn hiện hành Việt Nam (TCVN) và Tiêu chuẩn Châu Âu (Eurocode).</li>
-                    <li>Tự động lấy nội lực nguy hiểm, đồng bộ dữ liệu mô hình trực tiếp không qua trung gian.</li>
-                    <li>Kiểm tra toàn diện các điều kiện uốn, cắt, nứt, xoắn của cấu kiện dầm BTCT liên tục.</li>
-                </ul>
-                <div class="image-gallery">
-                    <div class="img-placeholder" onclick="openZoomModal(this, 'dam_1.png')"><img src="dam_1.png" onerror="this.style.display='none'"><div class="img-label">Ảnh Mô-đun Dầm 1</div><div class="img-hint">dam_1.png</div></div>
-                    <div class="img-placeholder" onclick="openZoomModal(this, 'dam_2.png')"><img src="dam_2.png" onerror="this.style.display='none'"><div class="img-label">Ảnh Mô-đun Dầm 2</div><div class="img-hint">dam_2.png</div></div>
-                    <div class="img-placeholder" onclick="openZoomModal(this, 'dam_3.png')"><img src="dam_3.png" onerror="this.style.display='none'"><div class="img-label">Ảnh Mô-đun Dầm 3</div><div class="img-hint">dam_3.png</div></div>
+            <h2 class="section-title" id="tien-ich">Bộ Công Cụ Tiện Ích CAD / Automation Tools</h2>
+            <div class="module-grid">
+                <div class="module-card">
+                    <div class="module-card-title-container">
+                        <h3>Bộ Tiện Ích In Ấn, Quản Lý Layout & Tự Động Hóa Sắp Xếp Bản Vẽ</h3>
+                        <p>Tập hợp các giải pháp tăng tốc độ hoàn thiện và xuất hồ sơ bản vẽ thiết kế nhanh chóng ngay trên phần mềm CAD.</p>
+                    </div>
+                    <ul class="module-features">
+                        <li>In ấn hàng loạt (Smart Plot) tự động nhận diện khung bản vẽ từ Model hoặc Layout, xuất định dạng PDF/DWG chỉ với 1 click.</li>
+                        <li>Công cụ quản lý, đồng bộ hệ thống Layout, Viewport linh hoạt và chuyên nghiệp cho toàn bộ dự án lớn.</li>
+                        <li>Tự động sắp xếp bản vẽ, quản lý thuộc tính Block thuộc tính (Attributed Block), đổi tên và đánh số thứ tự bản vẽ tự động hóa.</li>
+                    </ul>
+                    <div class="image-gallery">
+                        <div class="img-placeholder" onclick="openZoomModal(this, 'tool_1.png')"><img src="tool_1.png" onerror="this.style.display='none'"><div class="img-label">Ảnh Tiện Ích 1</div><div class="img-hint">tool_1.png</div></div>
+                        <div class="img-placeholder" onclick="openZoomModal(this, 'tool_2.png')"><img src="tool_2.png" onerror="this.style.display='none'"><div class="img-label">Ảnh Tiện Ích 2</div><div class="img-hint">tool_2.png</div></div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Module: Cột Vách -->
-            <div class="module-card">
-                <div class="module-card-title-container">
-                    <h3>Mô-đun Tính Toán Thiết Kế Cột Vách</h3>
-                    <p>Giải pháp tính toán hàng loạt cấu kiện cột tròn, cột chữ nhật và vách chữ nhật chịu nén lệch tâm xiên, hỗ trợ bố trí thép từ AutoCAD chuyên nghiệp.</p>
+            <section id="bang-gia-pro" class="pricing-section">
+                <div class="pricing-header">
+                    <div class="logo-box">
+                        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+                        CSA TOOLS
+                    </div>
+                    <h2>Bảng Giá Phần Mềm Kết Cấu</h2>
+                    <p>Hãy chọn gói phù hợp với nhu cầu triển khai và tính toán của bạn!</p>
                 </div>
-                <ul class="module-features">
-                    <li>Tính toán theo phương pháp biểu đồ tương tác chuẩn xác và kiểm tra cắt theo TCVN và Eurocode.</li>
-                    <li>Hỗ trợ thiết kế phân tích tối ưu hàng loạt cho tiết diện cột tròn, cột chữ nhật, vách chữ nhật.</li>
-                    <li>Nhập và đồng bộ sơ đồ bố trí thép trực tiếp từ AutoCAD giúp quản lý hàm lượng thép bao hợp lý.</li>
-                </ul>
-                <div class="image-gallery">
-                    <div class="img-placeholder" onclick="openZoomModal(this, 'cot_1.png')"><img src="cot_1.png" onerror="this.style.display='none'"><div class="img-label">Ảnh Cột Vách 1</div><div class="img-hint">cot_1.png</div></div>
-                    <div class="img-placeholder" onclick="openZoomModal(this, 'cot_2.png')"><img src="cot_2.png" onerror="this.style.display='none'"><div class="img-label">Ảnh Cột Vách 2</div><div class="img-hint">cot_2.png</div></div>
-                    <div class="img-placeholder" onclick="openZoomModal(this, 'cot_3.png')"><img src="cot_3.png" onerror="this.style.display='none'"><div class="img-label">Ảnh Cột Vách 3</div><div class="img-hint">cot_3.png</div></div>
+
+                <div class="pricing-grid">
+                    <div class="price-card">
+                        <div>
+                            <div class="card-plan-title">Gói Trải Nghiệm</div>
+                            <div class="price-amount">Miễn Phí</div>
+                            <div class="card-period">Sử dụng trong 3 ngày</div>
+                            <ul class="card-features-list">
+                                <li>Dùng thử 1 máy tính</li>
+                                <li>Bao gồm Tính toán kết cấu</li>
+                                <li>Bao gồm Triển khai bản vẽ</li>
+                            </ul>
+                        </div>
+                        <a href="javascript:void(0)" onclick="openRegisterPage('Trial License', 'FREE')" class="btn-card">Dùng Thử Ngay</a>
+                    </div>
+
+                    <div class="price-card">
+                        <div>
+                            <div class="card-plan-title">Gói 1 Tháng</div>
+                            <div class="price-amount">100.000<span>đ</span></div>
+                            <div class="card-period">Hạn dùng 30 ngày</div>
+                            <ul class="card-features-list">
+                                <li>Sử dụng cố định trên 2 máy</li>
+                                <li>Bao gồm Tính toán kết cấu</li>
+                                <li>Bao gồm Triển khai bản vẽ</li>
+                            </ul>
+                        </div>
+                        <a href="javascript:void(0)" onclick="openPaymentPage('1 Month License', '100.000đ')" class="btn-card">Đăng Ký Mua</a>
+                    </div>
+
+                    <div class="price-card">
+                        <div>
+                            <div class="card-plan-title">Gói 3 Tháng</div>
+                            <div class="price-amount">200.000<span>đ</span></div>
+                            <div class="card-period">Hạn dùng 90 ngày</div>
+                            <ul class="card-features-list">
+                                <li>Sử dụng cố định trên 2 máy</li>
+                                <li>Bao gồm Toàn bộ hệ sinh thái</li>
+                                <li class="highlight-green">Tiết kiệm hơn so với gói tháng</li>
+                            </ul>
+                        </div>
+                        <a href="javascript:void(0)" onclick="openPaymentPage('3 Month License', '200.000đ')" class="btn-card">Đăng Ký Mua</a>
+                    </div>
+
+                    <div class="price-card featured">
+                        <div class="pop-badge">Phổ Biến Nhất</div>
+                        <div>
+                            <div class="card-plan-title">Gói 1 Năm</div>
+                            <div class="price-amount">500.000<span>đ</span></div>
+                            <div class="card-period">Hạn dùng 365 ngày</div>
+                            <ul class="card-features-list">
+                                <li>Sử dụng cố định trên 2 máy</li>
+                                <li>Bao gồm Tính toán kết cấu</li>
+                                <li>Bao gồm Triển khai bản vẽ</li>
+                                <li class="highlight-green">Tối ưu chi phí lâu dài</li>
+                            </ul>
+                        </div>
+                        <a href="javascript:void(0)" onclick="openPaymentPage('1 Year License', '500.000đ')" class="btn-card">Đăng Ký Mua</a>
+                    </div>
+
+                    <div class="price-card">
+                        <div>
+                            <div class="card-plan-title">Gói Doanh Nghiệp</div>
+                            <div class="price-amount">3.000.000<span>đ</span></div>
+                            <div class="card-period">Hạn dùng trọn gói theo năm</div>
+                            <ul class="card-features-list">
+                                <li>Sử dụng cho 10 máy tính</li>
+                                <li>Ưu tiên hỗ trợ kỹ thuật 24/7</li>
+                                <li>Hỗ trợ update tất cả các bản cập nhật</li>
+                            </ul>
+                        </div>
+                        <a href="javascript:void(0)" onclick="openPaymentPage('Company License', '3.000.000đ')" class="btn-card">Liên Hệ Ngay</a>
+                    </div>
                 </div>
+            </section>
+        </main>
+    </div>
+
+    <div id="register-page-view" class="page-view container">
+        <div class="subpage-container">
+            <h2 class="subpage-title">Đăng Ký Tài Khoản Bản Quyền</h2>
+            
+            <form id="sheet-register-form">
+                <div class="form-group">
+                    <label for="reg-license">Gói đăng ký cấp quyền</label>
+                    <input type="text" id="reg-license" readonly style="background-color: #f1f5f9; font-weight: 700; color: #0d2c54;">
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-paycode">Mã theo dõi thanh toán đối chiếu</label>
+                    <input type="text" id="reg-paycode" readonly style="background-color: #f1f5f9; font-weight: 700; color: #2ecc71;">
+                </div>
+
+                <div class="form-group">
+                    <label for="username">Email / Tên đăng nhập</label>
+                    <input type="text" id="username" required placeholder="Nhập địa chỉ Email để đăng ký tài khoản...">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Mật khẩu truy cập Tool </label>
+                    <input type="password" id="password" required placeholder="Nhập mật khẩu tự chọn của bạn...">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Số điện thoại</label>
+                    <input type="text" id="phone" required placeholder="Nhập số điện thoại liên hệ kích hoạt...">
+                </div>
+
+                <input type="hidden" id="hwid-hidden-field">
+
+                <button type="submit" class="btn-submit">Xác Nhận Gửi Yêu Cầu Cấp Quyền</button>
+            </form>
+            
+            <div id="form-message" style="margin-top:15px; font-weight:700; text-align:center;"></div>
+
+            <div class="admin-note-box">
+                💡 <strong>LƯU Ý DUYỆT TÀI KHOẢN:</strong> Khi hoàn tất bấm xác nhận gửi form, quý anh chị kỹ sư vui lòng nhắn tin trực tiếp tới Admin qua <strong>Zalo/SĐT: 0862 209 864</strong> hoặc tham gia <strong>Group Zalo Hỗ Trợ Kỹ Thuật</strong> bên dưới để Admin duyệt kích hoạt `OK` tài khoản ngay trên Google Sheet nhé!
             </div>
-
-            <!-- Module: Sàn -->
-            <div class="module-card">
-                <div class="module-card-title-container">
-                    <h3>Mô-đun Tính Toán Thiết Kế Sàn</h3>
-                    <p>Phân tích hệ sàn bê tông cốt thép toàn khối, sàn phẳng bản nấm và hệ dầm sàn phức tạp.</p>
-                </div>
-                <ul class="module-features">
-                    <li>Tính toán diện tích cốt thép sàn theo các tổ hợp nội lực từ SAFE hoặc Etabs.</li>
-                    <li>Xuất dữ liệu thép phân bố trực quan giúp dễ dàng rải thép đều và thép tăng cường lực momen.</li>
-                    <li>Hỗ trợ trích xuất dữ liệu, kiểm tra ứng suất sàn nhanh chóng chuẩn quy trình thiết kế.</li>
-                </ul>
-                <div class="image-gallery">
-                    <div class="img-placeholder" onclick="openZoomModal(this, 'san_1.png')"><img src="san_1.png" onerror="this.style.display='none'"><div class="img-label">Ảnh Mô-đun Sàn 1</div><div class="img-hint">san_1.png</div></div>
-                    <div class="img-placeholder" onclick="openZoomModal(this, 'san_2.png')"><img src="san_2.png" onerror="this.style.display='none'"><div class="img-label">Ảnh Mô-đun Sàn 2</div><div class="img-hint">san_2.png</div></div>
-                    <div class="img-placeholder" onclick="openZoomModal(this, 'san_3.png')"><img src="san_3.png" onerror="this.style.display='none'"><div class="img-label">Ảnh Mô-đun Sàn 3</div><div class="img-hint">san_3.png</div></div>
-                </div>
-            </div>
-
-            <!-- Module: Kiểm Tra Cọc -->
-            <div class="module-card">
-                <div class="module-card-title-container">
-                    <h3>Mô-đun Kiểm Tra Thiết Kế Cọc</h3>
-                    <p>Giải pháp tính toán sức chịu tải cấu kiện cọc ly tâm, cọc khoan nhồi, cọc vuông bê tông; kiểm tra nhanh sức chịu tải cọc và hỗ trợ bố trí cọc tự động trong AutoCAD.</p>
-                </div>
-                <ul class="module-features">
-                    <li>Tính toán chi tiết sức chịu tải của cọc ly tâm, cọc khoan nhồi, cọc vuông bê tông đúc sẵn.</li>
-                    <li>Tích hợp thuật toán kiểm tra nhanh sức chịu tải cọc theo chỉ tiêu cơ lý đất nền và vật liệu.</li>
-                    <li>Tự động hóa tính toán, rải rắp vị trí tim cọc thông minh đồng bộ trực tiếp vào không gian AutoCAD.</li>
-                </ul>
-                <div class="image-gallery">
-                    <div class="img-placeholder" onclick="openZoomModal(this, 'coc_1.png')"><img src="coc_1.png" onerror="this.style.display='none'"><div class="img-label">Thiết Kế Cọc 1</div><div class="img-hint">coc_1.png</div></div>
-                    <div class="img-placeholder" onclick="openZoomModal(this, 'coc_2.png')"><img src="coc_2.png" onerror="this.style.display='none'"><div class="img-label">Thiết Kế Cọc 2</div><div class="img-hint">coc_2.png</div></div>
-                    <div class="img-placeholder" onclick="openZoomModal(this, 'coc_3.png')"><img src="coc_3.png" onerror="this.style.display='none'"><div class="img-label">Bố Trí Cọc Auto 3</div><div class="img-hint">coc_3.png</div></div>
-                </div>
-            </div>
-
-            <!-- Module: Móng -->
-            <div class="module-card">
-                <div class="module-card-title-container">
-                    <h3>Mô-đun Thiết Kế Móng</h3>
-                    <p>Giải pháp tối ưu hóa phân tích kiểm tra độc lập nền móng cho hệ móng đơn và móng băng.</p>
-                </div>
-                <ul class="module-features">
-                    <li>Xác định nhanh kích thước đáy đệm móng, kiểm tra áp lực nền móng chuẩn quy phạm.</li>
-                    <li>Tính toán diện tích cốt thép đài móng đơn, cốt thép móng băng theo tổ hợp lực momen.</li>
-                    <li>Báo cáo thuyết minh thông tin đồ họa rõ ràng phục vụ công tác hồ sơ bàn giao.</li>
-                </ul>
-                <div class="image-gallery">
-                    <div class="img-placeholder" onclick="openZoomModal(this, 'mong_1.png')"><img src="mong_1.png" onerror="this.style.display='none'"><div class="img-label">Ảnh Thiết Kế Móng 1</div><div class="img-hint">mong_1.png</div></div>
-                    <div class="img-placeholder" onclick="openZoomModal(this, 'mong_2.png')"><img src="mong_2.png" onerror="this.style.display='none'"><div class="img-label">Ảnh Thiết Kế Móng 2</div><div class="img-hint">mong_2.png</div></div>
-                                </div>
-
         </div>
+    </div>
 
-        <!-- ================= SECTION 2: AUTOMATIC DRAWINGS ================= -->
-        <h2 class="section-title" id="trien-khai">Triển Khai Bản Vẽ Tự Động & Thống Kê</h2>
-        <div class="module-grid">
-            <div class="module-card">
-                <div class="module-card-title-container">
-                    <h3>Hệ Thống Vẽ Tự Động Kết Cấu (Dầm, Sàn, Cột, Vách, Móng, Cầu Thang,...)</h3>
-                    <p>Liên kết trực tiếp dữ liệu từ các cấu kiện đã tính toán để tự động triển khai bản vẽ thiết kế, bản vẽ shopdrawing chi tiết sang AutoCAD kèm bảng thống kê cốt thép đầy đủ.</p>
-                </div>
-                <ul class="module-features">
-                    <li>Vẽ tự động mặt cắt, mặt đứng cấu kiện dầm, cột, vách chính xác theo đúng tỷ lệ bản vẽ cấu tạo.</li>
-                    <li>Tự động thống kê chi tiết từng thanh cốt thép, phân loại đường kính, hình dáng và xuất bảng thống kê trực tiếp trên bản vẽ.</li>
-                    <li>Rút ngắn đáng kể thời gian triển khai hồ sơ kỹ thuật, giảm thiểu tối đa các sai lệch hình học thủ công.</li>
-                </ul>
-                <div class="image-gallery" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
-                    <div class="img-placeholder" onclick="openZoomModal(this, 'trien_khai_1.png')"><img src="trien_khai_1.png" onerror="this.style.display='none'"><div class="img-label">Bản Vẽ Triển Khai 1</div><div class="img-hint">trien_khai_1.png</div></div>
-                    <div class="img-placeholder" onclick="openZoomModal(this, 'trien_khai_2.png')"><img src="trien_khai_2.png" onerror="this.style.display='none'"><div class="img-label">Bản Vẽ Triển Khai 2</div><div class="img-hint">trien_khai_2.png</div></div>
-                    <div class="img-placeholder" onclick="openZoomModal(this, 'trien_khai_3.png')"><img src="trien_khai_3.png" onerror="this.style.display='none'"><div class="img-label">Bản Vẽ Triển Khai 3</div><div class="img-hint">trien_khai_3.png</div></div>
-                    <div class="img-placeholder" onclick="openZoomModal(this, 'trien_khai_4.png')"><img src="trien_khai_4.png" onerror="this.style.display='none'"><div class="img-label">Bản Vẽ Triển Khai 4</div><div class="img-hint">trien_khai_4.png</div></div>
-                   
-                </div>
+    <div id="payment-page-view" class="page-view container">
+        <div class="subpage-container">
+            <h2 class="subpage-title">Hướng Dẫn Chuyển Khoản Kích Hoạt</h2>
+            <p style="font-size: 14px; color:#555; margin-bottom: 20px;">Vui lòng thực hiện chuyển khoản bằng mã QR hoặc tài khoản ngân hàng chính thức sau đây:</p>
+            
+            <div class="qr-wrapper">
+                <img class="qr-img" src="QR_Thanh_Toan.png" alt="Mã QR Ngân Hàng OCB" onerror="this.alt='[Mã QR Thanh Toán CSA Tools OCB]';">
             </div>
+
+            <div class="bank-details-card">
+                <div class="bank-row"><span>Ngân hàng thụ hưởng:</span><span>Ngân Hàng Phương Đông (OCB)</span></div>
+                <div class="bank-row"><span>Số tài khoản Admin:</span><span>001610001317904</span></div>
+                <div class="bank-row"><span>Gói mua bản quyền:</span><span id="pay-package-label"></span></div>
+                <div class="bank-row"><span>Số tiền cần chuyển:</span><span id="pay-amount-label" style="color: #c94c4c; font-size: 15px;"></span></div>
+                <div class="bank-row"><span>NỘI DUNG CHUYỂN KHOẢN CHUẨN:</span><span id="pay-code-label" style="color: #2ecc71; font-size: 16px;"></span></div>
+            </div>
+
+            <div class="admin-note-box" style="border-left-color: #2ecc71; background-color: #f4fbf7;">
+                🚀 <strong>BƯỚC TIẾP THEO:</strong> Sau khi bạn thực hiện chuyển tiền thành công, hãy bấm vào nút màu xanh **"Tiến Hành Nhập Email Để Tạo Tài Khoản"** ngay bên dưới nhé!
+            </div>
+
+            <button class="btn-submit" id="go-to-reg-btn" style="background-color: #2ecc71; margin-top:15px;">Tiến Hành Nhập Email Để Tạo Tài Khoản</button>
         </div>
+    </div>
 
-        <!-- ================= SECTION 3: CAD UTILITIES ================= -->
-        <h2 class="section-title" id="tien-ich">Bộ Công Cụ Tiện Ích CAD / Automation Tools</h2>
-        <div class="module-grid">
-            <div class="module-card">
-                <div class="module-card-title-container">
-                    <h3>Bộ Tiện Ích In Ấn, Quản Lý Layout & Tự Động Hóa Sắp Xếp Bản Vẽ</h3>
-                    <p>Tập hợp các giải pháp tăng tốc độ hoàn thiện và xuất hồ sơ bản vẽ thiết kế nhanh chóng ngay trên phần mềm CAD.</p>
-                </div>
-                <ul class="module-features">
-                    <li>In ấn hàng loạt (Smart Plot) tự động nhận diện khung bản vẽ từ Model hoặc Layout, xuất định dạng PDF/DWG chỉ với 1 click.</li>
-                    <li>Công cụ quản lý, đồng bộ hệ thống Layout, Viewport linh hoạt và chuyên nghiệp cho toàn bộ dự án lớn.</li>
-                    <li>Tự động sắp xếp bản vẽ, quản lý thuộc tính Block thuộc tính (Attributed Block), đổi tên và đánh số thứ tự bản vẽ tự động hóa.</li>
-                </ul>
-                <div class="image-gallery">
-                    <div class="img-placeholder" onclick="openZoomModal(this, 'tool_1.png')"><img src="tool_1.png" onerror="this.style.display='none'"><div class="img-label">Ảnh Tiện Ích 1</div><div class="img-hint">tool_1.png</div></div>
-                    <div class="img-placeholder" onclick="openZoomModal(this, 'tool_2.png')"><img src="tool_2.png" onerror="this.style.display='none'"><div class="img-label">Ảnh Tiện Ích 2</div><div class="img-hint">tool_2.png</div></div>
-                                    </div>
-            </div>
-        </div>
-
-        <!-- ================= SECTION 4: RE-BUILT PRICING ================= -->
-        <section id="bang-gia-pro" class="pricing-section">
-            <div class="pricing-header">
-                <div class="logo-box">
-                    <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
-                    CSA TOOLS
-                </div>
-                <h2>Bảng Giá Phần Mềm Kết Cấu</h2>
-                <p>Hãy chọn gói phù hợp với nhu cầu triển khai và tính toán của bạn!</p>
-            </div>
-
-            <div class="pricing-grid">
-                <!-- Gói Trải Nghiệm -->
-                <div class="price-card">
-                    <div>
-                        <div class="card-plan-title">Gói Trải Nghiệm</div>
-                        <div class="price-amount">Miễn Phí</div>
-                        <div class="card-period">Sử dụng trong 3 ngày</div>
-                        <ul class="card-features-list">
-                            <li>Dùng thử 1 máy tính</li>
-                            <li>Bao gồm Tính toán kết cấu</li>
-                            <li>Bao gồm Triển khai bản vẽ</li>
-                            <li>Hỗ trợ update tính năng mới</li>
-                        </ul>
-                    </div>
-                    <a href="#dang-ky" class="btn-card">Dùng Thử Ngay</a>
-                </div>
-
-                <!-- Gói 1 Tháng -->
-                <div class="price-card">
-                    <div>
-                        <div class="card-plan-title">Gói 1 Tháng</div>
-                        <div class="price-amount">100.000<span>đ</span></div>
-                        <div class="card-period">Hạn dùng 30 ngày</div>
-                        <ul class="card-features-list">
-                            <li>Sử dụng cố định trên 2 máy</li>
-                            <li>Bao gồm Tính toán kết cấu</li>
-                            <li>Bao gồm Triển khai bản vẽ</li>
-                            <li>Hỗ trợ update trong suốt thời gian sử dụng</li>
-                        </ul>
-                    </div>
-                    <a href="#dang-ky" class="btn-card">Đăng Ký Mua</a>
-                </div>
-
-                <!-- Gói 3 Tháng -->
-                <div class="price-card">
-                    <div>
-                        <div class="card-plan-title">Gói 3 Tháng</div>
-                        <div class="price-amount">200.000<span>đ</span></div>
-                        <div class="card-period">Hạn dùng 90 ngày</div>
-                        <ul class="card-features-list">
-                            <li>Sử dụng cố định trên 2 máy</li>
-                            <li>Bao gồm Tính toán kết cấu</li>
-                            <li>Bao gồm Triển khai bản vẽ</li>
-                            <li>Hỗ trợ update trong suốt thời gian sử dụng</li>
-                            <li class="highlight-green">Tiết kiệm hơn so với gói tháng</li>
-                        </ul>
-                    </div>
-                    <a href="#dang-ky" class="btn-card">Đăng Ký Mua</a>
-                </div>
-
-                <!-- Gói 1 Năm -->
-                <div class="price-card featured">
-                    <div class="pop-badge">Phổ Biến Nhất</div>
-                    <div>
-                        <div class="card-plan-title">Gói 1 Năm</div>
-                        <div class="price-amount">500.000<span>đ</span></div>
-                        <div class="card-period">Hạn dùng 365 ngày</div>
-                        <ul class="card-features-list">
-                            <li>Sử dụng cố định trên 2 máy</li>
-                            <li>Bao gồm Tính toán kết cấu</li>
-                            <li>Bao gồm Triển khai bản vẽ</li>
-                            <li>Hỗ trợ update trong suốt thời gian sử dụng</li>
-                            <li class="highlight-green">Tối ưu chi phí lâu dài</li>
-                        </ul>
-                    </div>
-                    <a href="#dang-ky" class="btn-card">Đăng Ký Mua</a>
-                </div>
-
-                <!-- Gói Doanh Nghiệp -->
-                <div class="price-card">
-                    <div>
-                        <div class="card-plan-title">Gói Doanh Nghiệp</div>
-                        <div class="price-amount">3.000.000<span>đ</span></div>
-                        <div class="card-period">Hạn dùng trọn gói theo năm</div>
-                        <ul class="card-features-list">
-                            <li>Sử dụng cho 10 máy tính</li>
-                            <li>Bao gồm Tính toán kết cấu</li>
-                            <li>Bao gồm Triển khai bản vẽ</li>
-                            <li>Ưu tiên hỗ trợ kỹ thuật 24/7</li>
-                            <li>Hỗ trợ update tất cả các bản cập nhật</li>
-                        </ul>
-                    </div>
-                    <a href="#dang-ky" class="btn-card">Liên Hệ Ngay</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================= SECTION 5: DANG KY TAI KHOAN ================= -->
-        <h2 class="section-title" id="dang-ky">Đăng Ký Tài Khoản Phần Mềm</h2>
-        <section class="register-section">
-            <div class="register-container">
-                <form id="sheet-register-form">
-                    <div class="form-group">
-                        <label for="username">Tên đăng nhập (User)</label>
-                        <input type="text" id="username" required placeholder="Nhập username của bạn...">
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Mật khẩu (Password)</label>
-                        <input type="password" id="password" required placeholder="Nhập mật khẩu...">
-                    </div>
-                    <button type="submit" class="btn-submit">Gửi Yêu Cầu Đăng Ký</button>
-                </form>
-                <div id="form-message"></div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer / Contact Information -->
     <footer class="footer-info" id="lien-he">
         <div class="footer-container">
-            
             <div class="footer-block">
                 <h4>Về CSA TOOLS</h4>
                 <p style="margin-bottom: 15px;">Phần mềm hướng đến sự đơn giản, dễ sử dụng, tự động hóa cao và phù hợp hoàn toàn với nhu cầu làm việc thực tế của kỹ sư xây dựng tại Việt Nam.</p>
                 <p>Theo dõi kênh YouTube để cập nhật thêm các video hướng dẫn sử dụng và tính năng mới nhất của CSA Tools.</p>
             </div>
-
             <div class="footer-block">
                 <h4>Đường Dẫn Tài Nguyên</h4>
                 <ul>
-                    <li><span class="contact-icon">▶</span> <a href="https://www.youtube.com/@AnTr%E1%BA%A7nC%C6%A1" target="_blank" style="color: #38bdf8; font-weight: bold;">Kênh YouTube</a></li>
-                    <li><span class="contact-icon">📥</span> <a href="https://drive.google.com/drive/folders/1VqY_xrHfkHBGZ3fY05nwL9-ZmkAHUsyj?usp=drive_link" target="_blank" style="font-weight: 600;">Link Tải Phần Mềm (Google Drive)</a></li>
-                    <li><span class="contact-icon">💬</span> <a href="https://zalo.me/g/ci4u5p4tarpfccw44w7l" target="_blank" style="color: #38bdf8; font-weight: bold;">Group Zalo Hỗ Trợ Kỹ Thuật</a></li>
+                    <li><span class="contact-icon">▶</span> <a href="https://www.youtube.com/@AnTr%E1%BA%A7nC%C6%A1" target="_blank">Kênh YouTube</a></li>
+                    <li><span class="contact-icon">📥</span> <a href="https://drive.google.com/drive/folders/1VqY_xrHfkHBGZ3fY05nwL9-ZmkAHUsyj?usp=drive_link" target="_blank">Link Tải Phần Mềm (Google Drive)</a></li>
+                    <li><span class="contact-icon">💬</span> <a href="https://zalo.me/g/ci4u5p4tarpfccw44w7l" target="_blank">Group Zalo Hỗ Trợ Kỹ Thuật</a></li>
                 </ul>
             </div>
-
             <div class="footer-block">
                 <h4>Tư Vấn & Hỗ Trợ Kỹ Thuật</h4>
                 <ul>
@@ -990,18 +1041,60 @@
                     <li><span class="contact-icon">🕒</span> <span><strong>Hỗ trợ:</strong> 24/7 Nhanh Chóng</span></li>
                 </ul>
             </div>
-
         </div>
-        
         <div class="footer-bottom">
             &copy; 2026 CSA TOOLS. Phát triển bởi Đội ngũ Kỹ sư Kỹ thuật chuyên nghiệp. All rights reserved.
         </div>
     </footer>
 
     <script>
+        // KIỂM TRA ĐÚNG ĐƯỜNG LINK WEB APP GOOGLE SCRIPT CỦA NÝ TẠI ĐÂY
         const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzvv_DZbdLNUFpdIfeM4NbPTxFEl9x4Zg5bM_LqwhdvwuvJl4YwDPDLbAJTS8iGUtCq/exec";
 
-        // INTERACTIVE ZOOM MODAL LOGIC
+        // SPA ROUTING LOGIC SYSTEM
+        function navigateToView(viewId) {
+            document.querySelectorAll('.page-view').forEach(v => v.classList.remove('active'));
+            const activeView = document.getElementById(viewId);
+            if(activeView) {
+                activeView.classList.add('active');
+                window.scrollTo(0, 0);
+            }
+        }
+
+        function switchPage(viewId, anchorId) {
+            navigateToView(viewId);
+            if(anchorId) {
+                setTimeout(() => {
+                    document.getElementById(anchorId)?.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+            }
+        }
+
+        // Điều phối mở trang nhập Email tạo tài khoản bản quyền
+        function openRegisterPage(licenseType, transferCode) {
+            navigateToView('register-page-view');
+            document.getElementById('reg-license').value = licenseType;
+            document.getElementById('reg-paycode').value = transferCode || 'FREE';
+            document.getElementById('form-message').innerText = "";
+        }
+
+        // Điều phối chuyển trang thanh toán OCB, tự động sinh mã hóa đơn điền Cột N
+        function openPaymentPage(licenseType, moneyAmount) {
+            navigateToView('payment-page-view');
+            document.getElementById('pay-package-label').innerText = licenseType;
+            document.getElementById('pay-amount-label').innerText = moneyAmount;
+            
+            // Tự sinh mã giao dịch theo dõi đối chiếu ngẫu nhiên dạng: CSA3924
+            const generatedBillNumber = "CSA" + Math.floor(1000 + Math.random() * 9000);
+            document.getElementById('pay-code-label').innerText = generatedBillNumber;
+
+            // Truyền dữ liệu ngầm sang trang Đăng ký khi bấm tiếp tục hành trình
+            document.getElementById('go-to-reg-btn').onclick = function() {
+                openRegisterPage(licenseType, generatedBillNumber);
+            };
+        }
+
+        // INTERACTIVE IMAGE ZOOM MODAL LOGIC
         const modal = document.getElementById("imageZoomModal");
         const modalImg = document.getElementById("zoomedImage");
         const captionText = document.getElementById("modalCaption");
@@ -1012,66 +1105,72 @@
             if (innerImg && innerImg.style.display !== 'none' && innerImg.src && !innerImg.src.includes('.html')) {
                 modalImg.src = innerImg.src;
             } else {
-                modalImg.src = fallbackSrc; 
+                modalImg.src = fallbackSrc;
             }
             captionText.innerHTML = element.querySelector('.img-label').innerText;
         }
 
-        function closeZoomModal() {
-            modal.style.display = "none";
+        function closeZoomModal() { modal.style.display = "none"; }
+        window.onclick = function(e) { if (e.target == modal) { modal.style.display = "none"; } }
+
+        // BỐC ID MÁY TỰ ĐỘNG TỪ ĐUÔI LINK URL TRUYỀN SANG
+        function getHWIDFromURL() {
+            return new URLSearchParams(window.location.search).get('hwid');
         }
 
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
+        window.addEventListener('DOMContentLoaded', () => {
+            let hwidValue = getHWIDFromURL();
+            if(!hwidValue) {
+                // Tự sinh dải mã máy ngẫu nhiên theo thời gian thực để NÝ TEST KHÔNG BAO GIỜ BỊ TRÙNG ID TRÊN SHEET
+                hwidValue = "WEB-" + Math.floor(100000 + Math.random() * 900000) + "-" + Date.now().toString().slice(-4);
             }
-        }
+            document.getElementById('hwid-hidden-field').value = hwidValue;
+        });
 
-        // AUTO HWID GENERATION LOGIC
-        function generateRandomHWID() {
-            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-            let result = '';
-            for (let i = 0; i < 16; i++) {
-                if (i > 0 && i % 4 === 0) result += '-';
-                result += chars.charAt(Math.floor(Math.random() * chars.length));
-            }
-            return 'CSA-' + result;
-        }
-
+        // XỬ LÝ GỬI DỮ LIỆU ĐỒNG BỘ KHỚP HOÀN TOÀN BIẾN TRÊN GOOGLE SCRIPT
         document.getElementById('sheet-register-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            
             const messageDiv = document.getElementById('form-message');
             messageDiv.style.color = '#0d2c54';
-            messageDiv.innerText = "Đang kết nối hệ thống Google Sheet...";
+            messageDiv.innerText = "Đang kết nối truyền dữ liệu cấp quyền lên Google Sheet...";
 
-            const user = document.getElementById('username').value.trim();
-            const pass = document.getElementById('password').value.trim();
-            const generatedHwid = generateRandomHWID();
+            const userEmail = document.getElementById('username').value.trim();
+            const userPass = document.getElementById('password').value.trim();
+            const userPhone = document.getElementById('phone').value.trim();
+            const licensePacket = document.getElementById('reg-license').value;
+            const textPaycode = document.getElementById('reg-paycode').value;
+            const finalHwid = document.getElementById('hwid-hidden-field').value;
 
-            const urlWithParams = `${GOOGLE_SCRIPT_URL}?action=register&user=${encodeURIComponent(user)}&pass=${encodeURIComponent(pass)}&hwid=${encodeURIComponent(generatedHwid)}`;
+            // ĐÓNG GÓI CHUẨN ĐÉT ĐỦ 7 BIẾN THAM SỐ GỬI LÊN SCRIPT ĐỂ NẠP VÀO CỘT L, M, N
+            const urlWithParams = `${GOOGLE_SCRIPT_URL}?action=register&user=${encodeURIComponent(userEmail)}&pass=${encodeURIComponent(userPass)}&hwid=${encodeURIComponent(finalHwid)}&license=${encodeURIComponent(licensePacket)}&phone=${encodeURIComponent(userPhone)}&paycode=${encodeURIComponent(textPaycode)}`;
 
             fetch(urlWithParams, { method: 'GET' })
             .then(response => response.text())
             .then(data => {
-                // SỬA ĐỔI HOÀN TOÀN CẤU TRÚC VĂN BẢN OUTPUT THEO YÊU CẦU MỚI CỦA NÝ
+                if(data.includes("ID_MAY_DA_TON_TAI")) {
+                    messageDiv.style.color = '#e74c3c';
+                    messageDiv.innerHTML = `⚠️ <strong>Đăng ký thất bại!</strong> Mã ID thiết bị này đã được đăng ký tài khoản trước đó.`;
+                    return;
+                }
+                
                 messageDiv.style.color = '#2ecc71';
-                messageDiv.innerHTML = `🎉 <strong>Đã gửi yêu cầu đăng ký thành công!</strong><br>` +
-                                        `<span style="color:#333; font-size:13.5px; display:inline-block; margin: 8px 0;">ID máy của bạn là: <strong style="color:#0d2c54;">${generatedHwid}</strong></span><br>` +
-                                        `<span style="color:#e67e22; font-weight:600;">Hãy liên hệ Admin để được duyệt tài khoản nhanh nhất.</span>`;
+                messageDiv.innerHTML = `🎉 <strong>Gửi thông tin đăng ký thành công!</strong><br>` +
+                                        `<span style="color:#333; font-size:13.5px; display:inline-block; margin: 8px 0;">Tài khoản cấp quyền: <strong>${userEmail}</strong></span><br>` +
+                                        `<span style="color:#e67e22; font-weight:600;">Mã CK đối chiếu: <strong style="color:#0d2c54;">${textPaycode}</strong>. Vui lòng nhắn Admin qua SĐT/Zalo để duyệt kích hoạt!</span>`;
+                
+                // Tự cấp mã mới phòng hờ ný bấm test liên tục acc tiếp theo luôn
+                document.getElementById('hwid-hidden-field').value = "WEB-" + Math.floor(100000 + Math.random() * 900000) + "-" + Date.now().toString().slice(-4);
                 document.getElementById('sheet-register-form').reset();
             })
             .catch(error => {
-                console.error("Error:", error);
-                // Fallback phòng trường hợp chặn CORS trình duyệt nhưng data thực tế đã nhảy về Sheet thành công
+                console.error("Fetch error:", error);
+                // Fallback cứu vớt trường hợp CORS chặn hiển thị nhưng thực tế dữ liệu đã chui tọt vào Sheet thành công
                 messageDiv.style.color = '#2ecc71';
-                messageDiv.innerHTML = `🎉 <strong>Đã gửi yêu cầu đăng ký thành công!</strong><br>` +
-                                        `<span style="color:#333; font-size:13.5px; display:inline-block; margin: 8px 0;">ID máy của bạn là: <strong style="color:#0d2c54;">${generatedHwid}</strong></span><br>` +
-                                        `<span style="color:#e67e22; font-weight:600;">Hãy liên hệ Admin để được duyệt tài khoản nhanh nhất.</span>`;
+                messageDiv.innerHTML = `🎉 <strong>Gửi thông tin đăng ký thành công!</strong><br>` +
+                                        `<span style="color:#e67e22; font-weight:600;">Hệ thống đã ghi nhận. Vui lòng nhắn Admin qua SĐT/Zalo để duyệt kích hoạt!</span>`;
                 document.getElementById('sheet-register-form').reset();
             });
         });
     </script>
-
 </body>
 </html>
